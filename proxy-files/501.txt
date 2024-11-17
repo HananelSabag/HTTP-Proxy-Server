@@ -1,0 +1,11 @@
+HTTP/1.1 501 Not supported
+Server: webserver/1.0
+Date: Fri, 05 Nov 2010 08:20:54 GMT
+Content-Type: text/html
+Content-Length: 129
+Connection: close
+
+<HTML><HEAD><TITLE>501 Not supported</TITLE></HEAD>
+<BODY><H4>501 Not supported</H4>
+Method is not supported.
+</BODY></HTML>

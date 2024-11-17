@@ -1,0 +1,11 @@
+HTTP/1.1 403 Forbidden
+Server: webserver/1.0
+Date: Fri, 05 Nov 2010 06:41:50 GMT
+Content-Type: text/html
+Content-Length: 111
+Connection: close
+
+<HTML><HEAD><TITLE>403 Forbidden</TITLE></HEAD>
+<BODY><H4>403 Forbidden</H4>
+Access denied.
+</BODY></HTML>

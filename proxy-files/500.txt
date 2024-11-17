@@ -1,0 +1,13 @@
+HTTP/1.1 500 Internal Server Error
+Server: webserver/1.0
+Date: Fri, 05 Nov 2010 08:20:54 GMT
+Content-Type: text/html
+Content-Length: 144
+Connection: close
+
+<HTML><HEAD><TITLE>500 Internal Server Error</TITLE></HEAD>
+<BODY><H4>500 Internal Server Error</H4>
+Some server side error.
+</BODY></HTML>
+
+

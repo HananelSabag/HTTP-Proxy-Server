@@ -1,0 +1,11 @@
+HTTP/1.1 400 Bad Request
+Server: webserver/1.0
+Date: Fri, 05 Nov 2010 13:50:33 GMT
+Content-Type: text/html
+Content-Length: 113
+Connection: close
+
+<HTML><HEAD><TITLE>400 Bad Request</TITLE></HEAD>
+<BODY><H4>400 Bad request</H4>
+Bad Request.
+</BODY></HTML>

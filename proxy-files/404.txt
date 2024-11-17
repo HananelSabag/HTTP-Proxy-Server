@@ -1,0 +1,11 @@
+HTTP/1.1 404 Not Found
+Server: webserver/1.0
+Date: Fri, 05 Nov 2010 08:22:49 GMT
+Content-Type: text/html
+Content-Length: 112
+Connection: close
+
+<HTML><HEAD><TITLE>404 Not Found</TITLE></HEAD>
+<BODY><H4>404 Not Found</H4>
+File not found.
+</BODY></HTML>
