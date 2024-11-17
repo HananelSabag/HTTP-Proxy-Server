@@ -1,0 +1,70 @@
+# HTTP Proxy Server
+
+This project implements a basic HTTP proxy server, designed to forward client requests to the internet, filter requests based on hostnames and IP addresses, and return responses to clients. It demonstrates proficiency in network programming, multithreading, and server management using the C programming language.
+
+## Project Description
+The HTTP Proxy Server performs the following key tasks:
+- **Request Forwarding:** Processes client HTTP requests and forwards them to their intended destinations.
+- **Traffic Filtering:** Applies customizable rules to evaluate requests based on hostnames or IP addresses, blocking non-compliant traffic and returning error responses to clients.
+- **Thread Pool Management:** Utilizes a thread pool to efficiently handle multiple concurrent requests, improving performance by reusing threads instead of creating and destroying them for each request.
+- **Error Handling and Logging:** Implements robust error handling mechanisms and detailed logging for debugging purposes.
+
+This project emphasizes practical system-level programming skills, showcasing knowledge of Linux environments, multithreading, and network communication protocols.
+
+## Features
+- **Customizable Traffic Rules:** Enables filtering based on specific hostnames or IP addresses.
+- **Concurrent Request Handling:** Manages multiple client requests efficiently with a thread pool system.
+- **Resource Optimization:** Reduces system overhead by reusing threads for task execution.
+- **Robustness:** Includes error handling and detailed logging to ensure smooth operation and ease of debugging.
+
+## Files
+- `proxyServer.c`: The main program file implementing the HTTP proxy server logic.
+- `threadpool.c`: Implements the thread pool for managing concurrent tasks.
+- `threadpool.h`: Header file containing the declarations for the thread pool functions.
+- `README`: This document, describing the project, its features, and setup instructions.
+
+## Compilation
+To compile the program, use the following command:
+```bash
+gcc -Wall -o proxyServer proxyServer.c threadpool.c -lpthread
+```
+
+## Usage
+1. **Compile the Program:**
+   Use the provided compilation command.
+
+2. **Run the Server:**
+   Start the proxy server by executing the compiled program:
+   ```bash
+   ./proxyServer
+   ```
+
+3. **Configure the Client:**
+   Set up your web browser or other tools (e.g., `curl`) to use the proxy server as an HTTP proxy.
+
+## Technical Highlights
+- **Multithreading:** Demonstrates the use of a thread pool for efficient resource management in a multithreaded environment.
+- **Network Programming:** Implements server-client communication using sockets and HTTP protocols.
+- **Error Handling:** Ensures robustness through careful error checking and logging.
+
+## Remarks
+The thread pool system is a core feature of the proxy server. It allows efficient management of concurrent requests, avoiding the overhead of frequent thread creation and destruction. Additionally, the filtering rules add an extra layer of control over the traffic passing through the proxy.
+
+## Author
+Developed by **Hananel Sabag** to demonstrate knowledge and skills in system programming, network communication, and multithreading.
+
+## Environment
+- **Operating System:** Tested on Linux.
+- **Dependencies:** Requires `gcc` for compilation and the `pthread` library for multithreading.
+
+## Future Improvements
+- Enhance logging functionality for better debugging and monitoring.
+- Add HTTPS support for secure traffic handling.
+- Implement a graphical user interface (GUI) for easier configuration of the proxy server.
+
+## Contact
+For inquiries or suggestions, feel free to reach out:
+- **Email:** hananel12345@gmail.com
+
+---
+
