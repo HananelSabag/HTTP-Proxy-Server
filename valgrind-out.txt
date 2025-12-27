@@ -1,0 +1,604 @@
+==2371== Memcheck, a memory error detector
+==2371== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==2371== Using Valgrind-3.22.0-bd4db67b1d-20231031 and LibVEX; rerun with -h for copyright info
+==2371== Command: ./proxyServer 3010 3 2 filter.txt
+==2371== Parent PID: 2340
+==2371== 
+--2371-- 
+--2371-- Valgrind options:
+--2371--    --leak-check=full
+--2371--    --tool=memcheck
+--2371--    --show-leak-kinds=all
+--2371--    --track-origins=yes
+--2371--    --verbose
+--2371--    --error-exitcode=1
+--2371--    -v
+--2371--    --log-file=valgrind-out.txt
+--2371-- Contents of /proc/version:
+--2371--   Linux version 5.15.167.4-microsoft-standard-WSL2 (root@f9c826d3017f) (gcc (GCC) 11.2.0, GNU ld (GNU Binutils) 2.37) #1 SMP Tue Nov 5 00:21:55 UTC 2024
+--2371-- 
+--2371-- Arch and hwcaps: AMD64, LittleEndian, amd64-cx16-lzcnt-rdtscp-sse3-ssse3-avx-avx2-bmi-f16c-rdrand-rdseed
+--2371-- Page sizes: currently 4096, max supported 4096
+--2371-- Valgrind library directory: /usr/libexec/valgrind
+--2371-- TT/TC: VG_(init_tt_tc) (startup of code management)
+--2371-- TT/TC: cache: ignoring --avg-transtab-entry-size=0, using tool provided default 640
+--2371-- TT/TC: cache: 32 sectors of 27,597,024 bytes each = 883,104,768 total TC
+--2371-- TT/TC: table: 32 tables[42588] of C 4,769,856 + H 1,362,816 bytes each = 196,245,504 total TT
+--2371-- TT/TC: table: 42588 tt entries each = 1,362,816 total tt entries
+--2371-- TT/TC: table: 32 htt[65521] of 131,042 bytes each = 4,193,344 total HTT (htt[65521] 65% max occup)
+==2371== Adding active redirection:
+--2371--     new: 0xffffffffff600000 (???                 ) R-> (0000.0) 0x580c2dfc ???
+==2371== Adding active redirection:
+--2371--     new: 0xffffffffff600400 (???                 ) R-> (0000.0) 0x580c2e06 ???
+==2371== Adding active redirection:
+--2371--     new: 0xffffffffff600800 (???                 ) R-> (0000.0) 0x580c2e10 ???
+--2371-- Reading syms from /mnt/c/Users/hanan/OneDrive/מסמכים/GitHub/HTTP-Proxy-Server/proxyServer
+--2371--    svma 0x00000025e0, avma 0x000010a5e0
+--2371-- Reading syms from /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+--2371--    svma 0x0000001000, avma 0x0004001000
+--2371-- summarise_context(loc_start = 0x14): cannot summarise(why=1):   
+0x30e: [0]={ 56(r3) { u  u  u  c-56 u  u  u  u  u  u  u  u  u  u  u  u  c-8 u  u  u  }
+--2371-- summarise_context(loc_start = 0x315): cannot summarise(why=1):   
+0x3f8: [0]={ 56(r3) { u  u  u  c-56 u  u  u  u  u  u  u  u  u  u  u  u  c-8 u  u  u  }
+--2371-- summarise_context(loc_start = 0x14): cannot summarise(why=1):   
+0x316: [0]={ 56(r3) { u  u  u  c-56 u  u  u  u  u  u  u  u  u  u  u  u  c-8 u  u  u  }
+--2371-- summarise_context(loc_start = 0x31d): cannot summarise(why=1):   
+0x3ea: [0]={ 56(r3) { u  u  u  c-56 u  u  u  u  u  u  u  u  u  u  u  u  c-8 u  u  u  }
+--2371-- summarise_context(loc_start = 0x14): cannot summarise(why=1):   
+0x102: [0]={ 56(r3) { u  u  u  c-56 u  u  u  u  u  u  u  u  u  u  u  u  c-8 u  u  u  }
+--2371-- summarise_context(loc_start = 0x109): cannot summarise(why=1):   
+0x182: [0]={ 56(r3) { u  u  u  c-56 u  u  u  u  u  u  u  u  u  u  u  u  c-8 u  u  u  }
+--2371-- summarise_context(loc_start = 0x8): cannot summarise(why=1):   
+0x74: [0]={ 32(r3) { u  u  u  c-32 u  u  u  u  u  u  u  u  u  u  u  u  c-8 u  u  u  }
+--2371-- summarise_context(loc_start = 0x8): cannot summarise(why=1):   
+0xc2: [0]={ 32(r3) { u  u  u  c-32 u  u  u  u  u  u  u  u  u  u  u  u  c-8 u  u  u  }
+--2371-- summarise_context(loc_start = 0x8): cannot summarise(why=1):   
+0xb2: [0]={ 32(r3) { u  u  u  c-32 u  u  u  u  u  u  u  u  u  u  u  u  c-8 u  u  u  }
+--2371-- summarise_context(loc_start = 0x92): cannot summarise(why=1):   
+0xb0: [0]={ 0(r5) { u  u  u  c0 u  u  dwReg9 dwReg8 u  u  u  u  c16 c24 c32 c40 dwReg1 u  u  u  }
+--2371--   Considering /usr/lib/debug/.build-id/35/3e1b6cb0eebc08cf3ff812eae8a51b4efd684e.debug ..
+--2371--   .. build-id is valid
+==2371== Adding active redirection:
+--2371--     new: 0x040272b0 (index               ) R-> (0000.0) 0x580c2e34 ???
+==2371== Adding active redirection:
+--2371--     new: 0x04028b00 (strlen              ) R-> (0000.0) 0x580c2e1a ???
+--2371-- Reading syms from /usr/libexec/valgrind/memcheck-amd64-linux
+--2371--    svma 0x0058001000, avma 0x0058001000
+--2371--    object doesn't have a dynamic symbol table
+--2371-- Scheduler: using generic scheduler lock implementation.
+--2371-- Reading suppressions file: /usr/libexec/valgrind/default.supp
+==2371== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-2371-by-root-on-???
+==2371== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-2371-by-root-on-???
+==2371== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-2371-by-root-on-???
+==2371== 
+==2371== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==2371== don't want to do, unless you know exactly what you're doing,
+==2371== or are doing some strange experiment):
+==2371==   /usr/bin/vgdb --pid=2371 ...command...
+==2371== 
+==2371== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==2371==   /path/to/gdb ./proxyServer
+==2371== and then give GDB the following command
+==2371==   target remote | /usr/bin/vgdb --pid=2371
+==2371== --pid is optional if only one valgrind process is running
+==2371== 
+--2371-- TT/TC: initialise sector 0
+--2371-- REDIR: 0x4028b00 (ld-linux-x86-64.so.2:strlen) redirected to 0x580c2e1a (???)
+--2371-- REDIR: 0x40272b0 (ld-linux-x86-64.so.2:index) redirected to 0x580c2e34 (???)
+--2371-- Reading syms from /usr/libexec/valgrind/vgpreload_core-amd64-linux.so
+--2371--    svma 0x0000001060, avma 0x000483d060
+--2371-- Reading syms from /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so
+--2371--    svma 0x00000050d0, avma 0x00048460d0
+==2371== Adding active redirection:
+--2371--     new: 0x04026910 (mempcpy             ) R-> (2029.0) 0x04853cd0 mempcpy
+==2371== Adding active redirection:
+--2371--     new: 0x04026bf0 (stpcpy              ) R-> (2020.0) 0x04852960 stpcpy
+==2371== Adding active redirection:
+--2371--     new: 0x040274e0 (strcmp              ) R-> (2016.0) 0x04850460 strcmp
+==2371== WARNING: new redirection conflicts with existing -- ignoring it
+--2371--     old: 0x04028b00 (strlen              ) R-> (0000.0) 0x580c2e1a ???
+--2371--     new: 0x04028b00 (strlen              ) R-> (2007.0) 0x0484f340 strlen
+==2371== Adding active redirection:
+--2371--     new: 0x04028ca0 (strncmp             ) R-> (2011.0) 0x0484fc90 strncmp
+--2371-- REDIR: 0x40274e0 (ld-linux-x86-64.so.2:strcmp) redirected to 0x4850460 (strcmp)
+--2371-- REDIR: 0x4026910 (ld-linux-x86-64.so.2:mempcpy) redirected to 0x4853cd0 (mempcpy)
+--2371-- Reading syms from /usr/lib/x86_64-linux-gnu/libc.so.6
+--2371--    svma 0x0000028800, avma 0x0004888800
+--2371-- summarise_context(loc_start = 0xa4): cannot summarise(why=1):   
+0xc2: [0]={ 0(r5) { u  u  u  c0 u  u  dwReg9 dwReg8 u  u  u  u  c16 c24 c32 c40 dwReg1 u  u  u  }
+--2371-- summarise_context(loc_start = 0x38): cannot summarise(why=1):   
+0x56: [0]={ 0(r5) { u  u  u  c0 u  u  dwReg9 dwReg8 u  u  u  u  c16 c24 c32 c40 dwReg1 u  u  u  }
+--2371-- summarise_context(loc_start = 0x3d): cannot summarise(why=1):   
+0x14c: [0]={ 0(r1) { u  u  u  c128 u  u  c120 c160 u  u  u  u  c72 c80 c88 c96 c168 u  u  u  }
+--2371-- summarise_context(loc_start = 0x5): cannot summarise(why=2):   
+0xd: [0]={ 0(r7) { u  u  u  u  u  u  u  u  u  u  u  u  u  u  u  u  dwReg5 u  u  u  }
+--2371-- summarise_context(loc_start = 0xd): cannot summarise(why=2):   
+0x25: [0]={ 8(r7) { u  u  u  u  u  u  u  u  u  u  u  u  u  u  u  u  dwReg5 u  u  u  }
+--2371-- summarise_context(loc_start = 0x25): cannot summarise(why=2):   
+0x39: [0]={ 0(r7) { u  u  u  u  u  u  u  u  u  u  u  u  u  u  u  u  dwReg5 u  u  u  }
+--2371-- summarise_context(loc_start = 0xfa): cannot summarise(why=1):   
+0x118: [0]={ 0(r5) { u  u  u  c0 u  u  dwReg9 dwReg8 u  u  u  u  c16 c24 c32 c40 dwReg1 u  u  u  }
+--2371--   Considering /usr/lib/debug/.build-id/6d/64b17fbac799e68da7ebd9985ddf9b5cb375e6.debug ..
+--2371--   .. build-id is valid
+==2371== Adding active redirection:
+--2371--     new: 0x048a9300 (putenv              ) W-> (0000.0) 0x04854670 putenv
+==2371== Adding active redirection:
+--2371--     new: 0x048aad20 (setenv              ) W-> (0000.0) 0x048547d0 setenv
+==2371== Adding active redirection:
+--2371--     new: 0x048aad90 (unsetenv            ) W-> (0000.0) 0x04854720 unsetenv
+==2371== Adding active redirection:
+--2371--     new: 0x0490d640 (malloc              ) R-> (1001.0) 0x048467b0 malloc
+==2371== Ignoring duplicate redirection:
+--2371--     old: 0x0490d640 (malloc              ) R-> (1001.0) 0x048467b0 malloc
+--2371--     new: 0x0490d640 (malloc              ) R-> (1001.0) 0x048466c0 malloc
+==2371== Ignoring duplicate redirection:
+--2371--     old: 0x0490d640 (malloc              ) R-> (1001.0) 0x048467b0 malloc
+--2371--     new: 0x0490d640 (malloc              ) R-> (1001.0) 0x048466c0 malloc
+==2371== Adding active redirection:
+--2371--     new: 0x0490dd20 (free                ) R-> (1005.0) 0x04849820 free
+==2371== Ignoring duplicate redirection:
+--2371--     old: 0x0490dd20 (free                ) R-> (1005.0) 0x04849820 free
+--2371--     new: 0x0490dd20 (free                ) R-> (1005.0) 0x04849770 free
+==2371== Ignoring duplicate redirection:
+--2371--     old: 0x0490dd20 (free                ) R-> (1005.0) 0x04849820 free
+--2371--     new: 0x0490dd20 (free                ) R-> (1005.0) 0x04849a30 cfree
+==2371== Ignoring duplicate redirection:
+--2371--     old: 0x0490dd20 (free                ) R-> (1005.0) 0x04849820 free
+--2371--     new: 0x0490dd20 (free                ) R-> (1005.0) 0x04849980 cfree
+==2371== Ignoring duplicate redirection:
+--2371--     old: 0x0490dd20 (free                ) R-> (1005.0) 0x04849820 free
+--2371--     new: 0x0490dd20 (free                ) R-> (1005.0) 0x04849770 free
+==2371== Adding active redirection:
+--2371--     new: 0x0490e090 (realloc             ) R-> (1009.0) 0x0484db00 realloc
+==2371== Ignoring duplicate redirection:
+--2371--     old: 0x0490e090 (realloc             ) R-> (1009.0) 0x0484db00 realloc
+--2371--     new: 0x0490e090 (realloc             ) R-> (1009.0) 0x0484d9e0 realloc
+==2371== Ignoring duplicate redirection:
+--2371--     old: 0x0490e090 (realloc             ) R-> (1009.0) 0x0484db00 realloc
+--2371--     new: 0x0490e090 (realloc             ) R-> (1009.0) 0x0484d9e0 realloc
+==2371== Adding active redirection:
+--2371--     new: 0x0490e640 (memalign            ) R-> (1011.0) 0x0484ddc0 memalign
+==2371== Ignoring duplicate redirection:
+--2371--     old: 0x0490e640 (memalign            ) R-> (1011.0) 0x0484ddc0 memalign
+--2371--     new: 0x0490e640 (memalign            ) R-> (1011.0) 0x0484dc20 memalign
+==2371== Adding active redirection:
+--2371--     new: 0x0490e680 (aligned_alloc       ) R-> (1017.0) 0x0484e540 aligned_alloc
+==2371== Ignoring duplicate redirection:
+--2371--     old: 0x0490e680 (aligned_alloc       ) R-> (1017.0) 0x0484e540 aligned_alloc
+--2371--     new: 0x0490e680 (aligned_alloc       ) R-> (1017.0) 0x0484e3c0 aligned_alloc
+==2371== Adding active redirection:
+--2371--     new: 0x0490e6e0 (valloc              ) R-> (1012.0) 0x0484e030 valloc
+==2371== Ignoring duplicate redirection:
+--2371--     old: 0x0490e6e0 (valloc              ) R-> (1012.0) 0x0484e030 valloc
+--2371--     new: 0x0490e6e0 (valloc              ) R-> (1012.0) 0x0484df60 valloc
+==2371== Ignoring duplicate redirection:
+--2371--     old: 0x0490e6e0 (valloc              ) R-> (1012.0) 0x0484e030 valloc
+--2371--     new: 0x0490e6e0 (valloc              ) R-> (1012.0) 0x0484df60 valloc
+==2371== Adding active redirection:
+--2371--     new: 0x0490e720 (pvalloc             ) R-> (1019.0) 0x04846550 pvalloc
+==2371== Adding active redirection:
+--2371--     new: 0x0490e790 (calloc              ) R-> (1007.0) 0x0484d8a0 calloc
+==2371== Ignoring duplicate redirection:
+--2371--     old: 0x0490e790 (calloc              ) R-> (1007.0) 0x0484d8a0 calloc
+--2371--     new: 0x0490e790 (calloc              ) R-> (1007.0) 0x0484d760 calloc
+==2371== Adding active redirection:
+--2371--     new: 0x0490eb90 (malloc_trim         ) R-> (1015.0) 0x04846540 malloc_trim
+==2371== Ignoring duplicate redirection:
+--2371--     old: 0x0490eb90 (malloc_trim         ) R-> (1015.0) 0x04846540 malloc_trim
+--2371--     new: 0x0490eb90 (malloc_trim         ) R-> (1015.0) 0x04846530 malloc_trim
+==2371== Ignoring duplicate redirection:
+--2371--     old: 0x0490eb90 (malloc_trim         ) R-> (1015.0) 0x04846540 malloc_trim
+--2371--     new: 0x0490eb90 (malloc_trim         ) R-> (1015.0) 0x04846530 malloc_trim
+==2371== Adding active redirection:
+--2371--     new: 0x0490ee60 (malloc_usable_size  ) R-> (1018.0) 0x0484e7a0 malloc_usable_size
+==2371== Ignoring duplicate redirection:
+--2371--     old: 0x0490ee60 (malloc_usable_size  ) R-> (1018.0) 0x0484e7a0 malloc_usable_size
+--2371--     new: 0x0490ee60 (malloc_usable_size  ) R-> (1018.0) 0x0484e6c0 malloc_usable_size
+==2371== Adding active redirection:
+--2371--     new: 0x0490efd0 (mallinfo            ) R-> (1021.0) 0x0484eb20 mallinfo
+==2371== Ignoring duplicate redirection:
+--2371--     old: 0x0490efd0 (mallinfo            ) R-> (1021.0) 0x0484eb20 mallinfo
+--2371--     new: 0x0490efd0 (mallinfo            ) R-> (1021.0) 0x0484ea40 mallinfo
+==2371== Ignoring duplicate redirection:
+--2371--     old: 0x0490efd0 (mallinfo            ) R-> (1021.0) 0x0484eb20 mallinfo
+--2371--     new: 0x0490efd0 (mallinfo            ) R-> (1021.0) 0x0484ea40 mallinfo
+==2371== Adding active redirection:
+--2371--     new: 0x0490f040 (malloc_stats        ) R-> (1020.0) 0x048465c0 malloc_stats
+==2371== Ignoring duplicate redirection:
+--2371--     old: 0x0490f040 (malloc_stats        ) R-> (1020.0) 0x048465c0 malloc_stats
+--2371--     new: 0x0490f040 (malloc_stats        ) R-> (1020.0) 0x048465b0 malloc_stats
+==2371== Ignoring duplicate redirection:
+--2371--     old: 0x0490f040 (malloc_stats        ) R-> (1020.0) 0x048465c0 malloc_stats
+--2371--     new: 0x0490f040 (malloc_stats        ) R-> (1020.0) 0x048465b0 malloc_stats
+==2371== Adding active redirection:
+--2371--     new: 0x0490f290 (mallopt             ) R-> (1014.0) 0x04846510 mallopt
+==2371== Ignoring duplicate redirection:
+--2371--     old: 0x0490f290 (mallopt             ) R-> (1014.0) 0x04846510 mallopt
+--2371--     new: 0x0490f290 (mallopt             ) R-> (1014.0) 0x048464f0 mallopt
+==2371== Adding active redirection:
+--2371--     new: 0x0490f420 (posix_memalign      ) R-> (1016.0) 0x0484e260 posix_memalign
+==2371== Ignoring duplicate redirection:
+--2371--     old: 0x0490f420 (posix_memalign      ) R-> (1016.0) 0x0484e260 posix_memalign
+--2371--     new: 0x0490f420 (posix_memalign      ) R-> (1016.0) 0x0484e100 posix_memalign
+==2371== Adding active redirection:
+--2371--     new: 0x04911060 (bcopy               ) R-> (2023.0) 0x048536f0 bcopy
+==2371== Adding active redirection:
+--2371--     new: 0x049115a0 (memchr              ) R-> (2017.0) 0x048504e0 memchr
+==2371== Ignoring duplicate redirection:
+--2371--     old: 0x049115a0 (memchr              ) R-> (2017.0) 0x048504e0 memchr
+--2371--     new: 0x049115a0 (memchr              ) R-> (2017.0) 0x04850520 __GI_memchr
+==2371== Adding active redirection:
+--2371--     new: 0x04911620 (bcmp                ) R-> (2019.0) 0x04852480 bcmp
+==2371== Ignoring duplicate redirection:
+--2371--     old: 0x04911620 (bcmp                ) R-> (2019.0) 0x04852480 bcmp
+--2371--     new: 0x04911620 (bcmp                ) R-> (2019.0) 0x04852240 memcmp
+==2371== Ignoring duplicate redirection:
+--2371--     old: 0x04911620 (bcmp                ) R-> (2019.0) 0x04852480 bcmp
+--2371--     new: 0x04911620 (bcmp                ) R-> (2019.0) 0x04852240 memcmp
+==2371== Ignoring duplicate redirection:
+--2371--     old: 0x04911620 (bcmp                ) R-> (2019.0) 0x04852480 bcmp
+--2371--     new: 0x04911620 (bcmp                ) R-> (2019.0) 0x048522d0 __GI_memcmp
+==2371== Adding active redirection:
+--2371--     new: 0x04911710 (memcpy@@GLIBC_2.14  ) R-> (2018.0) 0x048508c0 memcpy@@GLIBC_2.14
+==2371== Ignoring duplicate redirection:
+--2371--     old: 0x04911710 (memcpy@@GLIBC_2.14  ) R-> (2018.0) 0x048508c0 memcpy@@GLIBC_2.14
+--2371--     new: 0x04911710 (memcpy@@GLIBC_2.14  ) R-> (2018.0) 0x04850bf0 memcpy
+==2371== Ignoring duplicate redirection:
+--2371--     old: 0x04911710 (memcpy@@GLIBC_2.14  ) R-> (2018.0) 0x048508c0 memcpy@@GLIBC_2.14
+--2371--     new: 0x04911710 (memcpy@@GLIBC_2.14  ) R-> (2018.0) 0x04850f20 __GI_memcpy
+==2371== Adding active redirection:
+--2371--     new: 0x04911fb0 (memmove             ) R-> (2018.1) 0x04852d60 memmove
+==2371== Ignoring duplicate redirection:
+--2371--     old: 0x04911fb0 (memmove             ) R-> (2018.1) 0x04852d60 memmove
+--2371--     new: 0x04911fb0 (memmove             ) R-> (2018.1) 0x04853090 __GI_memmove
+==2371== Adding active redirection:
+--2371--     new: 0x049120d0 (mempcpy             ) R-> (2029.0) 0x048538d0 mempcpy
+==2371== Ignoring duplicate redirection:
+--2371--     old: 0x049120d0 (mempcpy             ) R-> (2029.0) 0x048538d0 mempcpy
+--2371--     new: 0x049120d0 (mempcpy             ) R-> (2029.0) 0x048539d0 __GI_mempcpy
+==2371== Adding active redirection:
+--2371--     new: 0x049121f0 (memrchr             ) R-> (2036.0) 0x04850560 memrchr
+==2371== Adding active redirection:
+--2371--     new: 0x04912280 (memset              ) R-> (2021.0) 0x04852c50 memset
+==2371== Adding active redirection:
+--2371--     new: 0x04912370 (rawmemchr           ) R-> (2026.0) 0x048537f0 rawmemchr
+==2371== Ignoring duplicate redirection:
+--2371--     old: 0x04912370 (rawmemchr           ) R-> (2026.0) 0x048537f0 rawmemchr
+--2371--     new: 0x04912370 (rawmemchr           ) R-> (2026.0) 0x04853810 __GI___rawmemchr
+==2371== Adding active redirection:
+--2371--     new: 0x04912430 (stpcpy              ) R-> (2020.0) 0x048525a0 stpcpy
+==2371== Ignoring duplicate redirection:
+--2371--     old: 0x04912430 (stpcpy              ) R-> (2020.0) 0x048525a0 stpcpy
+--2371--     new: 0x04912430 (stpcpy              ) R-> (2020.0) 0x04852660 __GI_stpcpy
+==2371== Adding active redirection:
+--2371--     new: 0x049124a0 (stpncpy             ) R-> (2042.0) 0x04852ae0 stpncpy
+==2371== Adding active redirection:
+--2371--     new: 0x04912500 (strcasecmp          ) R-> (2012.0) 0x0484fcf0 strcasecmp
+==2371== Adding active redirection:
+--2371--     new: 0x049125a0 (strcasecmp_l        ) R-> (2014.0) 0x0484ff70 strcasecmp_l
+==2371== Ignoring duplicate redirection:
+--2371--     old: 0x049125a0 (strcasecmp_l        ) R-> (2014.0) 0x0484ff70 strcasecmp_l
+--2371--     new: 0x049125a0 (strcasecmp_l        ) R-> (2014.0) 0x04850050 __GI___strcasecmp_l
+==2371== Adding active redirection:
+--2371--     new: 0x04912c40 (strcasestr          ) R-> (2035.0) 0x04854180 strcasestr
+==2371== Adding active redirection:
+--2371--     new: 0x04913010 (strcat              ) R-> (2003.0) 0x0484ef30 strcat
+==2371== Ignoring duplicate redirection:
+--2371--     old: 0x04913010 (strcat              ) R-> (2003.0) 0x0484ef30 strcat
+--2371--     new: 0x04913010 (strcat              ) R-> (2003.0) 0x0484f000 __GI_strcat
+==2371== Adding active redirection:
+--2371--     new: 0x04913080 (index               ) R-> (2002.0) 0x0484ef00 index
+==2371== Ignoring duplicate redirection:
+--2371--     old: 0x04913080 (index               ) R-> (2002.0) 0x0484ef00 index
+--2371--     new: 0x04913080 (index               ) R-> (2002.0) 0x0484ee40 strchr
+==2371== Ignoring duplicate redirection:
+--2371--     old: 0x04913080 (index               ) R-> (2002.0) 0x0484ef00 index
+--2371--     new: 0x04913080 (index               ) R-> (2002.0) 0x0484ee40 strchr
+==2371== Ignoring duplicate redirection:
+--2371--     old: 0x04913080 (index               ) R-> (2002.0) 0x0484ef00 index
+--2371--     new: 0x04913080 (index               ) R-> (2002.0) 0x0484ee70 __GI_strchr
+==2371== Adding active redirection:
+--2371--     new: 0x04913100 (strchrnul           ) R-> (2025.0) 0x048537b0 strchrnul
+==2371== Adding active redirection:
+--2371--     new: 0x04913190 (strcmp              ) R-> (2016.0) 0x04850360 strcmp
+==2371== Ignoring duplicate redirection:
+--2371--     old: 0x04913190 (strcmp              ) R-> (2016.0) 0x04850360 strcmp
+--2371--     new: 0x04913190 (strcmp              ) R-> (2016.0) 0x048503a0 __GI_strcmp
+==2371== Adding active redirection:
+--2371--     new: 0x04914290 (strcpy              ) R-> (2008.0) 0x0484f370 strcpy
+==2371== Ignoring duplicate redirection:
+--2371--     old: 0x04914290 (strcpy              ) R-> (2008.0) 0x0484f370 strcpy
+--2371--     new: 0x04914290 (strcpy              ) R-> (2008.0) 0x0484f430 __GI_strcpy
+==2371== Adding active redirection:
+--2371--     new: 0x04914300 (strcspn             ) R-> (2033.0) 0x04854010 strcspn
+==2371== Ignoring duplicate redirection:
+--2371--     old: 0x04914300 (strcspn             ) R-> (2033.0) 0x04854010 strcspn
+--2371--     new: 0x04914300 (strcspn             ) R-> (2033.0) 0x04854090 __GI_strcspn
+==2371== Adding active redirection:
+--2371--     new: 0x04914cb0 (strlen              ) R-> (2007.0) 0x0484f220 strlen
+==2371== Ignoring duplicate redirection:
+--2371--     old: 0x04914cb0 (strlen              ) R-> (2007.0) 0x0484f220 strlen
+--2371--     new: 0x04914cb0 (strlen              ) R-> (2007.0) 0x0484f250 __GI_strlen
+==2371== Adding active redirection:
+--2371--     new: 0x04914d40 (strncasecmp         ) R-> (2013.0) 0x0484fdd0 strncasecmp
+==2371== Adding active redirection:
+--2371--     new: 0x04914de0 (strncasecmp_l       ) R-> (2015.0) 0x048500c0 strncasecmp_l
+==2371== Ignoring duplicate redirection:
+--2371--     old: 0x04914de0 (strncasecmp_l       ) R-> (2015.0) 0x048500c0 strncasecmp_l
+--2371--     new: 0x04914de0 (strncasecmp_l       ) R-> (2015.0) 0x04850280 __GI___strncasecmp_l
+==2371== Adding active redirection:
+--2371--     new: 0x04914e80 (strncat             ) R-> (2004.0) 0x0484f0d0 strncat
+==2371== Adding active redirection:
+--2371--     new: 0x04914ee0 (strncmp             ) R-> (2011.0) 0x0484fab0 strncmp
+==2371== Ignoring duplicate redirection:
+--2371--     old: 0x04914ee0 (strncmp             ) R-> (2011.0) 0x0484fab0 strncmp
+--2371--     new: 0x04914ee0 (strncmp             ) R-> (2011.0) 0x0484fb10 __GI_strncmp
+==2371== Adding active redirection:
+--2371--     new: 0x04914f80 (strncpy             ) R-> (2009.0) 0x0484f4f0 strncpy
+==2371== Ignoring duplicate redirection:
+--2371--     old: 0x04914f80 (strncpy             ) R-> (2009.0) 0x0484f4f0 strncpy
+--2371--     new: 0x04914f80 (strncpy             ) R-> (2009.0) 0x0484f660 __GI_strncpy
+==2371== Adding active redirection:
+--2371--     new: 0x04915040 (strnlen             ) R-> (2006.0) 0x0484f1c0 strnlen
+==2371== Ignoring duplicate redirection:
+--2371--     old: 0x04915040 (strnlen             ) R-> (2006.0) 0x0484f1c0 strnlen
+--2371--     new: 0x04915040 (strnlen             ) R-> (2006.0) 0x0484f1f0 __GI_strnlen
+==2371== Adding active redirection:
+--2371--     new: 0x049150d0 (strpbrk             ) R-> (2032.0) 0x04853fc0 strpbrk
+==2371== Adding active redirection:
+--2371--     new: 0x04915100 (rindex              ) R-> (2001.0) 0x0484ed20 rindex
+==2371== Ignoring duplicate redirection:
+--2371--     old: 0x04915100 (rindex              ) R-> (2001.0) 0x0484ed20 rindex
+--2371--     new: 0x04915100 (rindex              ) R-> (2001.0) 0x0484ecf0 strrchr
+==2371== Ignoring duplicate redirection:
+--2371--     old: 0x04915100 (rindex              ) R-> (2001.0) 0x0484ed20 rindex
+--2371--     new: 0x04915100 (rindex              ) R-> (2001.0) 0x0484ed50 __GI_strrchr
+==2371== Ignoring duplicate redirection:
+--2371--     old: 0x04915100 (rindex              ) R-> (2001.0) 0x0484ed20 rindex
+--2371--     new: 0x04915100 (rindex              ) R-> (2001.0) 0x0484ecf0 strrchr
+==2371== Adding active redirection:
+--2371--     new: 0x049152d0 (strspn              ) R-> (2034.0) 0x04854110 strspn
+==2371== Adding active redirection:
+--2371--     new: 0x04915b90 (strstr              ) R-> (2031.0) 0x04853e40 strstr
+==2371== Adding active redirection:
+--2371--     new: 0x0491a2c0 (__memcmp_sse2       ) R-> (2019.0) 0x04852360 __memcmp_sse2
+==2371== Adding active redirection:
+--2371--     new: 0x0491a870 (memcpy@GLIBC_2.2.5  ) R-> (2018.1) 0x04850590 memcpy@GLIBC_2.2.5
+==2371== Ignoring lower priority redirection:
+--2371--     old: 0x0491a870 (memcpy@GLIBC_2.2.5  ) R-> (2018.1) 0x04850590 memcpy@GLIBC_2.2.5
+--2371--     new: 0x0491a870 (memcpy@GLIBC_2.2.5  ) R-> (2018.0) 0x04850bf0 memcpy
+==2371== Adding active redirection:
+--2371--     new: 0x0491b4d0 (__stpcpy_sse2       ) R-> (2020.0) 0x04852720 __stpcpy_sse2
+==2371== Adding active redirection:
+--2371--     new: 0x0491b5c0 (__stpcpy_sse2_unalig) R-> (2020.0) 0x048527e0 __stpcpy_sse2_unaligned
+==2371== Adding active redirection:
+--2371--     new: 0x0491f6b0 (__strchr_sse2       ) R-> (2002.0) 0x0484eea0 __strchr_sse2
+==2371== Adding active redirection:
+--2371--     new: 0x0491faf0 (__strcmp_sse2       ) R-> (2016.0) 0x048503e0 __strcmp_sse2
+==2371== Adding active redirection:
+--2371--     new: 0x04921910 (__strlen_sse2       ) R-> (2007.0) 0x0484f280 __strlen_sse2
+==2371== Adding active redirection:
+--2371--     new: 0x04924d70 (__strncmp_sse2      ) R-> (2011.0) 0x0484fb70 __strncmp_sse2
+==2371== Adding active redirection:
+--2371--     new: 0x049265d0 (__strncpy_sse2_unali) R-> (2009.0) 0x0484f940 __strncpy_sse2_unaligned
+==2371== Adding active redirection:
+--2371--     new: 0x04927800 (__strrchr_sse2      ) R-> (2001.0) 0x0484ed80 __strrchr_sse2
+==2371== Adding active redirection:
+--2371--     new: 0x0492a8e0 (wcschr              ) R-> (2040.0) 0x04854450 wcschr
+==2371== Adding active redirection:
+--2371--     new: 0x0492a990 (wcscmp              ) R-> (2038.0) 0x048542f0 wcscmp
+==2371== Adding active redirection:
+--2371--     new: 0x0492b8f0 (wcscpy              ) R-> (2039.0) 0x04854390 wcscpy
+==2371== Adding active redirection:
+--2371--     new: 0x0492bb20 (wcslen              ) R-> (2037.0) 0x04854260 wcslen
+==2371== Adding active redirection:
+--2371--     new: 0x0492c2c0 (wcsncmp             ) R-> (2045.0) 0x04854330 wcsncmp
+==2371== Adding active redirection:
+--2371--     new: 0x0492c350 (wcsncpy             ) R-> (2048.0) 0x04854550 wcsncpy
+==2371== Adding active redirection:
+--2371--     new: 0x0492c3b0 (wcsnlen             ) R-> (2044.0) 0x04854290 wcsnlen
+==2371== Adding active redirection:
+--2371--     new: 0x0492c790 (wcsrchr             ) R-> (2041.0) 0x04854480 wcsrchr
+==2371== Adding active redirection:
+--2371--     new: 0x04938eb0 (wmemchr             ) R-> (2043.0) 0x048544b0 wmemchr
+==2371== Ignoring duplicate redirection:
+--2371--     old: 0x04938eb0 (wmemchr             ) R-> (2043.0) 0x048544b0 wmemchr
+--2371--     new: 0x04938eb0 (wmemchr             ) R-> (2043.0) 0x048544e0 __GI_wmemchr
+==2371== Adding active redirection:
+--2371--     new: 0x04938f30 (wmemcmp             ) R-> (2047.0) 0x04854510 wmemcmp
+==2371== Adding active redirection:
+--2371--     new: 0x049973c0 (__memcpy_chk        ) R-> (2030.0) 0x04853dd0 __memcpy_chk
+==2371== Adding active redirection:
+--2371--     new: 0x049974e0 (__memmove_chk       ) R-> (2024.0) 0x04853740 __memmove_chk
+==2371== Adding active redirection:
+--2371--     new: 0x04997eb0 (__stpcpy_chk        ) R-> (2028.0) 0x04853880 __stpcpy_chk
+==2371== Adding active redirection:
+--2371--     new: 0x04997f90 (__strcpy_chk        ) R-> (2027.0) 0x04853830 __strcpy_chk
+==2371== Adding active redirection:
+--2371--     new: 0x049e8a00 (__memcpy_avx_unalign) R-> (2018.0) 0x04851580 __memcpy_avx_unaligned_erms
+==2371== Adding active redirection:
+--2371--     new: 0x04a071c0 (__strcmp_sse42      ) R-> (2016.0) 0x04850420 __strcmp_sse42
+==2371== Adding active redirection:
+--2371--     new: 0x04a09b30 (__strncmp_sse42     ) R-> (2011.0) 0x0484fbd0 __strncmp_sse42
+==2371== Adding active redirection:
+--2371--     new: 0x04a0ad30 (__strchr_sse2_no_bsf) R-> (2002.0) 0x0484eed0 __strchr_sse2_no_bsf
+--2371-- REDIR: 0x4028ca0 (ld-linux-x86-64.so.2:strncmp) redirected to 0x484fc90 (strncmp)
+--2371-- REDIR: 0x4915040 (libc.so.6:strnlen) redirected to 0x483d1c0 (_vgnU_ifunc_wrapper)
+==2371== Adding active redirection:
+--2371--     new: 0x049ed320 (__strnlen_avx2      ) R-> (2006.0) 0x0484f1c0 strnlen
+--2371-- REDIR: 0x49150d0 (libc.so.6:strpbrk) redirected to 0x483d1c0 (_vgnU_ifunc_wrapper)
+==2371== Adding active redirection:
+--2371--     new: 0x04a0ab10 (__strpbrk_sse42     ) R-> (2032.0) 0x04853fc0 strpbrk
+--2371-- REDIR: 0x4913190 (libc.so.6:strcmp) redirected to 0x483d1c0 (_vgnU_ifunc_wrapper)
+==2371== Adding active redirection:
+--2371--     new: 0x049eaf90 (__strcmp_avx2       ) R-> (2016.0) 0x04850360 strcmp
+--2371-- REDIR: 0x492c3b0 (libc.so.6:wcsnlen) redirected to 0x483d1c0 (_vgnU_ifunc_wrapper)
+==2371== Adding active redirection:
+--2371--     new: 0x049efd20 (__wcsnlen_avx2      ) R-> (2044.0) 0x04854290 wcsnlen
+--2371-- REDIR: 0x4912280 (libc.so.6:memset) redirected to 0x483d1c0 (_vgnU_ifunc_wrapper)
+==2371== Adding active redirection:
+--2371--     new: 0x049e9400 (__memset_avx2_unalig) R-> (2021.0) 0x04852c50 memset
+--2371-- REDIR: 0x492bb20 (libc.so.6:wcslen) redirected to 0x483d1c0 (_vgnU_ifunc_wrapper)
+==2371== Adding active redirection:
+--2371--     new: 0x049eec40 (__wcslen_avx2       ) R-> (2037.0) 0x04854260 wcslen
+--2371-- REDIR: 0x49973c0 (libc.so.6:__memcpy_chk) redirected to 0x483d1c0 (_vgnU_ifunc_wrapper)
+==2371== Adding active redirection:
+--2371--     new: 0x049e89d0 (__memcpy_chk_avx_una) R-> (2030.0) 0x04853dd0 __memcpy_chk
+--2371-- REDIR: 0x49121f0 (libc.so.6:memrchr) redirected to 0x483d1c0 (_vgnU_ifunc_wrapper)
+==2371== Adding active redirection:
+--2371--     new: 0x049e9100 (__memrchr_avx2      ) R-> (2036.0) 0x04850560 memrchr
+--2371-- REDIR: 0x492c350 (libc.so.6:wcsncpy) redirected to 0x483d1c0 (_vgnU_ifunc_wrapper)
+==2371== Adding active redirection:
+--2371--     new: 0x049ef8c0 (__wcsncpy_avx2      ) R-> (2048.0) 0x04854550 wcsncpy
+--2371-- REDIR: 0x4911710 (libc.so.6:memcpy@@GLIBC_2.14) redirected to 0x483d1c0 (_vgnU_ifunc_wrapper)
+==2371== Ignoring duplicate redirection:
+--2371--     old: 0x049e8a00 (__memcpy_avx_unalign) R-> (2018.0) 0x04851580 __memcpy_avx_unaligned_erms
+--2371--     new: 0x049e8a00 (__memcpy_avx_unalign) R-> (2018.0) 0x048508c0 memcpy@@GLIBC_2.14
+--2371-- REDIR: 0x492a8e0 (libc.so.6:wcschr) redirected to 0x483d1c0 (_vgnU_ifunc_wrapper)
+==2371== Adding active redirection:
+--2371--     new: 0x049ee2c0 (__wcschr_avx2       ) R-> (2040.0) 0x04854450 wcschr
+--2371-- REDIR: 0x4913080 (libc.so.6:index) redirected to 0x483d1c0 (_vgnU_ifunc_wrapper)
+==2371== Adding active redirection:
+--2371--     new: 0x049eab60 (__strchr_avx2       ) R-> (2002.0) 0x0484ef00 index
+--2371-- REDIR: 0x4915100 (libc.so.6:rindex) redirected to 0x483d1c0 (_vgnU_ifunc_wrapper)
+==2371== Adding active redirection:
+--2371--     new: 0x049ed5f0 (__strrchr_avx2      ) R-> (2001.0) 0x0484ed20 rindex
+--2371-- REDIR: 0x492a990 (libc.so.6:wcscmp) redirected to 0x483d1c0 (_vgnU_ifunc_wrapper)
+==2371== Adding active redirection:
+--2371--     new: 0x049ee510 (__wcscmp_avx2       ) R-> (2038.0) 0x048542f0 wcscmp
+--2371-- REDIR: 0x49124a0 (libc.so.6:stpncpy) redirected to 0x483d1c0 (_vgnU_ifunc_wrapper)
+==2371== Adding active redirection:
+--2371--     new: 0x049e9940 (__stpncpy_avx2      ) R-> (2042.0) 0x04852ae0 stpncpy
+--2371-- REDIR: 0x4938eb0 (libc.so.6:wmemchr) redirected to 0x483d1c0 (_vgnU_ifunc_wrapper)
+==2371== Adding active redirection:
+--2371--     new: 0x049f0340 (__wmemchr_avx2      ) R-> (2043.0) 0x048544b0 wmemchr
+--2371-- REDIR: 0x4914ee0 (libc.so.6:strncmp) redirected to 0x483d1c0 (_vgnU_ifunc_wrapper)
+==2371== Adding active redirection:
+--2371--     new: 0x049ec820 (__strncmp_avx2      ) R-> (2011.0) 0x0484fab0 strncmp
+--2371-- REDIR: 0x4912500 (libc.so.6:strcasecmp) redirected to 0x483d1c0 (_vgnU_ifunc_wrapper)
+==2371== Adding active redirection:
+--2371--     new: 0x049e9e40 (__strcasecmp_avx2   ) R-> (2012.0) 0x0484fcf0 strcasecmp
+--2371-- REDIR: 0x4914300 (libc.so.6:strcspn) redirected to 0x483d1c0 (_vgnU_ifunc_wrapper)
+==2371== Adding active redirection:
+--2371--     new: 0x04a07f70 (__strcspn_sse42     ) R-> (2033.0) 0x04854010 strcspn
+--2371-- REDIR: 0x492b8f0 (libc.so.6:wcscpy) redirected to 0x483d1c0 (_vgnU_ifunc_wrapper)
+==2371== Adding active redirection:
+--2371--     new: 0x049eea20 (__wcscpy_avx2       ) R-> (2039.0) 0x04854390 wcscpy
+--2371-- REDIR: 0x4913010 (libc.so.6:strcat) redirected to 0x483d1c0 (_vgnU_ifunc_wrapper)
+==2371== Adding active redirection:
+--2371--     new: 0x049ea850 (__strcat_avx2       ) R-> (2003.0) 0x0484ef30 strcat
+--2371-- REDIR: 0x4914de0 (libc.so.6:strncasecmp_l) redirected to 0x483d1c0 (_vgnU_ifunc_wrapper)
+==2371== Adding active redirection:
+--2371--     new: 0x049eb8d0 (__strncasecmp_l_avx2) R-> (2015.0) 0x048500c0 strncasecmp_l
+--2371-- REDIR: 0x4913100 (libc.so.6:strchrnul) redirected to 0x483d1c0 (_vgnU_ifunc_wrapper)
+==2371== Adding active redirection:
+--2371--     new: 0x049eada0 (__strchrnul_avx2    ) R-> (2025.0) 0x048537b0 strchrnul
+--2371-- REDIR: 0x4911620 (libc.so.6:bcmp) redirected to 0x483d1c0 (_vgnU_ifunc_wrapper)
+==2371== Adding active redirection:
+--2371--     new: 0x049e82a0 (__memcmp_avx2_movbe ) R-> (2019.0) 0x04852480 bcmp
+--2371-- REDIR: 0x4914290 (libc.so.6:strcpy) redirected to 0x483d1c0 (_vgnU_ifunc_wrapper)
+==2371== Adding active redirection:
+--2371--     new: 0x049eb4f0 (__strcpy_avx2       ) R-> (2008.0) 0x0484f370 strcpy
+--2371-- REDIR: 0x49125a0 (libc.so.6:strcasecmp_l) redirected to 0x483d1c0 (_vgnU_ifunc_wrapper)
+==2371== Adding active redirection:
+--2371--     new: 0x049e9e50 (__strcasecmp_l_avx2 ) R-> (2014.0) 0x0484ff70 strcasecmp_l
+--2371-- REDIR: 0x4914cb0 (libc.so.6:strlen) redirected to 0x483d1c0 (_vgnU_ifunc_wrapper)
+==2371== Adding active redirection:
+--2371--     new: 0x049eb740 (__strlen_avx2       ) R-> (2007.0) 0x0484f220 strlen
+--2371-- REDIR: 0x4914f80 (libc.so.6:strncpy) redirected to 0x483d1c0 (_vgnU_ifunc_wrapper)
+==2371== Adding active redirection:
+--2371--     new: 0x049ece80 (__strncpy_avx2      ) R-> (2009.0) 0x0484f4f0 strncpy
+--2371-- REDIR: 0x4938f30 (libc.so.6:wmemcmp) redirected to 0x483d1c0 (_vgnU_ifunc_wrapper)
+==2371== Adding active redirection:
+--2371--     new: 0x049f0600 (__wmemcmp_avx2_movbe) R-> (2047.0) 0x04854510 wmemcmp
+--2371-- REDIR: 0x49974e0 (libc.so.6:__memmove_chk) redirected to 0x483d1c0 (_vgnU_ifunc_wrapper)
+==2371== WARNING: new redirection conflicts with existing -- ignoring it
+--2371--     old: 0x049e89d0 (__memcpy_chk_avx_una) R-> (2030.0) 0x04853dd0 __memcpy_chk
+--2371--     new: 0x049e89d0 (__memcpy_chk_avx_una) R-> (2024.0) 0x04853740 __memmove_chk
+--2371-- REDIR: 0x4912430 (libc.so.6:stpcpy) redirected to 0x483d1c0 (_vgnU_ifunc_wrapper)
+==2371== Adding active redirection:
+--2371--     new: 0x049e96b0 (__stpcpy_avx2       ) R-> (2020.0) 0x048525a0 stpcpy
+--2371-- REDIR: 0x4911fb0 (libc.so.6:memmove) redirected to 0x483d1c0 (_vgnU_ifunc_wrapper)
+==2371== Preferring higher priority redirection:
+--2371--     old: 0x049e8a00 (__memcpy_avx_unalign) R-> (2018.0) 0x04851580 __memcpy_avx_unaligned_erms
+--2371--     new: 0x049e8a00 (__memcpy_avx_unalign) R-> (2018.1) 0x04852d60 memmove
+==2371== Adding active redirection:
+--2371--     new: 0x049e8a00 (__memcpy_avx_unalign) R-> (2018.1) 0x04852d60 memmove
+--2371-- REDIR: 0x49115a0 (libc.so.6:memchr) redirected to 0x483d1c0 (_vgnU_ifunc_wrapper)
+==2371== Adding active redirection:
+--2371--     new: 0x049e8000 (__memchr_avx2       ) R-> (2017.0) 0x048504e0 memchr
+--2371-- REDIR: 0x49152d0 (libc.so.6:strspn) redirected to 0x483d1c0 (_vgnU_ifunc_wrapper)
+==2371== Adding active redirection:
+--2371--     new: 0x04a0ac10 (__strspn_sse42      ) R-> (2034.0) 0x04854110 strspn
+--2371-- REDIR: 0x49120d0 (libc.so.6:mempcpy) redirected to 0x483d1c0 (_vgnU_ifunc_wrapper)
+==2371== Adding active redirection:
+--2371--     new: 0x049e89c0 (__mempcpy_avx_unalig) R-> (2029.0) 0x048538d0 mempcpy
+--2371-- REDIR: 0x4914d40 (libc.so.6:strncasecmp) redirected to 0x483d1c0 (_vgnU_ifunc_wrapper)
+==2371== Adding active redirection:
+--2371--     new: 0x049eb8c0 (__strncasecmp_avx2  ) R-> (2013.0) 0x0484fdd0 strncasecmp
+--2371-- REDIR: 0x4915b90 (libc.so.6:strstr) redirected to 0x483d1c0 (_vgnU_ifunc_wrapper)
+==2371== Adding active redirection:
+--2371--     new: 0x04927e10 (__strstr_sse2_unalig) R-> (2031.0) 0x04853e40 strstr
+--2371-- REDIR: 0x49ed5f0 (libc.so.6:__strrchr_avx2) redirected to 0x484ed20 (rindex)
+--2371-- REDIR: 0x490d640 (libc.so.6:malloc) redirected to 0x48467b0 (malloc)
+--2371-- REDIR: 0x49eab60 (libc.so.6:__strchr_avx2) redirected to 0x484ef00 (index)
+--2371-- REDIR: 0x49e8000 (libc.so.6:__memchr_avx2) redirected to 0x48504e0 (memchr)
+--2371-- REDIR: 0x49e8a00 (libc.so.6:__memcpy_avx_unaligned_erms) redirected to 0x4852d60 (memmove)
+--2371-- REDIR: 0x490dd20 (libc.so.6:free) redirected to 0x4849820 (free)
+--2371-- REDIR: 0x49e9400 (libc.so.6:__memset_avx2_unaligned_erms) redirected to 0x4852c50 (memset)
+--2371-- REDIR: 0x490e790 (libc.so.6:calloc) redirected to 0x484d8a0 (calloc)
+--2371-- REDIR: 0x49eada0 (libc.so.6:__strchrnul_avx2) redirected to 0x48537b0 (strchrnul)
+--2371-- Reading syms from /usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+--2371--    svma 0x0000004780, avma 0x000667c780
+--2371-- summarise_context(loc_start = 0x3a0): cannot summarise(why=1):   
+0x3a3: [0]={ 8(r2) { c-72 c-64 u  c-56 u  u  u  u  u  u  u  u  c-48 c-40 c-32 c-24 c-8 u  u  u  }
+--2371-- summarise_context(loc_start = 0x3a4): cannot summarise(why=2):   
+0x3a6: [0]={ 0(r7) { c-72 c-64 u  c-56 u  u  u  u  u  u  u  u  c-48 c-40 c-32 c-24 dwReg2 u  u  u  }
+--2371-- summarise_context(loc_start = 0x207): cannot summarise(why=1):   
+0x20a: [0]={ 8(r2) { c-72 c-64 u  c-56 u  u  u  u  u  u  u  u  c-48 c-40 c-32 c-24 c-8 u  u  u  }
+--2371-- summarise_context(loc_start = 0x20b): cannot summarise(why=2):   
+0x20d: [0]={ 0(r7) { c-72 c-64 u  c-56 u  u  u  u  u  u  u  u  c-48 c-40 c-32 c-24 dwReg2 u  u  u  }
+--2371-- summarise_context(loc_start = 0x209): cannot summarise(why=1):   
+0x20c: [0]={ 16(r6) { c-72 c-64 u  c-56 u  u  c-16 u  u  u  u  u  c-48 c-40 c-32 c-24 c-8 u  u  u  } [1]={ 8(r2) { c-72 c-64 u  c-56 u  u  u  u  u  u  u  u  c-48 c-40 c-32 c-24 c-8 u  u  u  }
+--2371-- summarise_context(loc_start = 0x20d): cannot summarise(why=2):   
+0x210: [0]={ 16(r6) { c-72 c-64 u  c-56 u  u  c-16 u  u  u  u  u  c-48 c-40 c-32 c-24 c-8 u  u  u  } [1]={ 0(r7) { c-72 c-64 u  c-56 u  u  u  u  u  u  u  u  c-48 c-40 c-32 c-24 dwReg2 u  u  u  }
+--2371-- summarise_context(loc_start = 0x152): cannot summarise(why=1):   
+0x155: [0]={ 8(r2) { c-72 c-64 u  c-56 u  u  u  u  u  u  u  u  c-48 c-40 c-32 c-24 c-8 u  u  u  }
+--2371-- summarise_context(loc_start = 0x156): cannot summarise(why=2):   
+0x158: [0]={ 0(r7) { c-72 c-64 u  c-56 u  u  u  u  u  u  u  u  c-48 c-40 c-32 c-24 dwReg2 u  u  u  }
+==2371== Ignoring lower priority redirection:
+--2371--     old: 0x049e8a00 (__memcpy_avx_unalign) R-> (2018.1) 0x04852d60 memmove
+--2371--     new: 0x049e8a00 (__memcpy_avx_unalign) R-> (2018.0) 0x048508c0 memcpy@@GLIBC_2.14
+--2371-- REDIR: 0x49eb740 (libc.so.6:__strlen_avx2) redirected to 0x484f220 (strlen)
+--2371-- Caught __NR_exit; running __gnu_cxx::__freeres and __libc_freeres() wrapper
+--2371-- Discarding syms at 0x667c780-0x669f745 in /usr/lib/x86_64-linux-gnu/libgcc_s.so.1 (have_dinfo 1)
+==2371== 
+==2371== HEAP SUMMARY:
+==2371==     in use at exit: 8 bytes in 2 blocks
+==2371==   total heap usage: 18 allocs, 16 frees, 9,910 bytes allocated
+==2371== 
+==2371== Searching for pointers to 2 not-freed blocks
+--2371--   Scanning root segment: 0x10e000..0x10efff (4096)
+--2371--   Scanning root segment: 0x10f000..0x50efff (4194304)
+--2371--   Scanning root segment: 0x4038000..0x4039fff (8192)
+--2371--   Scanning root segment: 0x403a000..0x403afff (4096)
+--2371--   Scanning root segment: 0x483a000..0x483bfff (8192)
+--2371--   Scanning root segment: 0x4840000..0x4840fff (4096)
+--2371--   Scanning root segment: 0x4859000..0x4859fff (4096)
+--2371--   Scanning root segment: 0x4a63000..0x4a64fff (8192)
+--2371--   Scanning root segment: 0x4a65000..0x4a74fff (65536)
+--2371--   Scanning root segment: 0x1ffeffd000..0x1fff000fff (16384)
+==2371== Checked 4,301,696 bytes
+==2371== 
+==2371== 8 bytes in 2 blocks are definitely lost in loss record 1 of 1
+==2371==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==2371==    by 0x10B475: main (in /mnt/c/Users/hanan/OneDrive/מסמכים/GitHub/HTTP-Proxy-Server/proxyServer)
+==2371== 
+==2371== LEAK SUMMARY:
+==2371==    definitely lost: 8 bytes in 2 blocks
+==2371==    indirectly lost: 0 bytes in 0 blocks
+==2371==      possibly lost: 0 bytes in 0 blocks
+==2371==    still reachable: 0 bytes in 0 blocks
+==2371==         suppressed: 0 bytes in 0 blocks
+==2371== 
+==2371== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
